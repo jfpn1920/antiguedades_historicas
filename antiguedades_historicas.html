@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>antiguedades historicas</title>
+    <link rel="stylesheet" href="antiguedades_historicas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="antiguedades_historicas.js" defer></script>
+</head>
+<body>
+    <!-------------------------------------------->
+    <!--|estructuracion_antiguedades_historicas|-->
+    <!-------------------------------------------->
+    <main class="contenedor_antiguedades">
+        <header class="encabezado_antiguedades">
+            <div class="icono_antiguedades">
+                <i class="fa-solid fa-landmark"></i>
+            </div>
+            <div>
+                <h1>Antigüedades Históricas</h1>
+                <p>Descubre objetos de diferentes épocas.</p>
+            </div>
+        </header>
+        <!----------------------------->
+        <!--|resumen_de_antiguedades|-->
+        <!----------------------------->
+        <section class="resumen_antiguedades">
+            <div class="dato_resumen">
+                <i class="fa-solid fa-box-archive"></i>
+                <div>
+                    <span>Objetos</span>
+                    <strong id="total_objetos">3</strong>
+                </div>
+            </div>
+            <div class="dato_resumen">
+                <i class="fa-solid fa-heart"></i>
+                <div>
+                    <span>Favoritos</span>
+                    <strong id="total_favoritos">0</strong>
+                </div>
+            </div>
+        </section>
+        <!-------------------------->
+        <!--|filtrar_antiguedades|-->
+        <!-------------------------->
+        <section class="filtros_antiguedades">
+            <label for="filtro_epoca">Filtrar por época</label>
+            <select id="filtro_epoca">
+                <option value="todos">Todas las épocas</option>
+                <option value="antigua">Antigua</option>
+                <option value="medieval">Medieval</option>
+                <option value="moderna">Moderna</option>
+            </select>
+        </section>
+        <!----------------------------->
+        <!--|galeria_de_antiguedades|-->
+        <!----------------------------->
+        <section id="galeria_antiguedades" class="galeria_antiguedades">
+            <article class="tarjeta_antiguedad" data-epoca="antigua" data-id="moneda_romana">
+                <div class="imagen_antiguedad">
+                    <img src="https://images.unsplash.com/photo-1605711285791-0219e80e43a3?auto=format&fit=crop&w=800&q=80" alt="Moneda antigua">
+                    <button class="boton_favorito" type="button"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                <div class="contenido_antiguedad">
+                    <span class="etiqueta_epoca">Antigua</span>
+                    <h2>Moneda Romana</h2>
+                    <p>Moneda inspirada en piezas utilizadas durante el periodo del Imperio Romano.</p>
+                    <button class="boton_detalles" type="button"><i class="fa-solid fa-circle-info"></i>Ver detalles</button>
+                    <div class="detalles_antiguedad">
+                        Metal utilizado para representar
+                        monedas históricas de la época romana.
+                    </div>
+                </div>
+            </article>
+            <article class="tarjeta_antiguedad" data-epoca="medieval" data-id="reloj_medieval">
+                <div class="imagen_antiguedad">
+                    <img src="https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?auto=format&fit=crop&w=800&q=80" alt="Reloj antiguo">
+                    <button class="boton_favorito" type="button"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                <div class="contenido_antiguedad">
+                    <span class="etiqueta_epoca">Medieval</span>
+                    <h2>Reloj de Colección</h2>
+                    <p>Representación de un antiguo reloj utilizado como pieza decorativa.</p>
+                    <button class="boton_detalles" type="button"><i class="fa-solid fa-circle-info"></i>Ver detalles</button>
+                    <div class="detalles_antiguedad">
+                        Pieza inspirada en relojes mecánicos
+                        utilizados en siglos anteriores.
+                    </div>
+                </div>
+            </article>
+            <article class="tarjeta_antiguedad" data-epoca="moderna" data-id="maquina_escritura">
+                <div class="imagen_antiguedad">
+                    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80" alt="Máquina de escribir antigua">
+                    <button class="boton_favorito" type="button"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                <div class="contenido_antiguedad">
+                    <span class="etiqueta_epoca">Moderna</span>
+                    <h2>Máquina de Escribir</h2>
+                    <p>Objeto utilizado antiguamente para escribir documentos y cartas.</p>
+                    <button class="boton_detalles" type="button"><i class="fa-solid fa-circle-info"></i>Ver detalles</button>
+                    <div class="detalles_antiguedad">
+                        Instrumento mecánico utilizado antes
+                        de la popularización de los ordenadores.
+                    </div>
+                </div>
+            </article>
+        </section>
+        <!-------------------->
+        <!--|alerta_mensaje|-->
+        <!-------------------->
+        <div id="mensaje_filtro" class="mensaje_filtro">
+            No hay objetos para esta época.
+        </div>
+    </main>
+</body>
+</html>
